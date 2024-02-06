@@ -32,6 +32,7 @@ class StatisticsActivity : AppCompatActivity() {
             .setPositiveButton("Да") { _, _ ->
                 App.db.getDao().delete(position)
                 adapter.notifyDataSetChanged()
+
             }
 
             .setNegativeButton("Нет"){_,_ ->
