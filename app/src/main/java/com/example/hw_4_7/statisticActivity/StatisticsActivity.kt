@@ -30,7 +30,7 @@ class StatisticsActivity : AppCompatActivity() {
 
             .setPositiveButton("Да") { _, _ ->
                 viewModel.deleteStatistic(position).observe(this){
-                    adapter.removeItem(it)
+                    adapter.removeItem(position)
                 }
             }
 

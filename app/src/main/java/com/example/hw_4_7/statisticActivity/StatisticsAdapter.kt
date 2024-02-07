@@ -14,14 +14,14 @@ class StatisticsAdapter(val onClick: (statistic: Statistic) -> Boolean) :
     private val list = arrayListOf<Statistic>()
 
     fun addStatistics(models: List<Statistic>) {
-        //list.clear()
+        list.clear()
         list.addAll(models)
         notifyDataSetChanged()
     }
 
-    fun removeItem(position: Int) {
-        list.removeAt(position)
-        notifyItemRemoved(position)
+    fun removeItem(position: Statistic) {
+        list.remove(position)
+        notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StatisticsViewHolder {
