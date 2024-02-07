@@ -8,4 +8,5 @@ import com.example.hw_4_7.data.local.Statistic
 class StatisticViewModel:ViewModel() {
     private val repository = Repository()
     fun getStatistic():LiveData<List<Statistic>> = repository.getStatistic()
+    fun deleteStatistic(position:Statistic):LiveData<Int> = repository.deleteStatistic(position)
 }

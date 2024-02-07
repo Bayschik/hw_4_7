@@ -16,4 +16,8 @@ class Repository {
     fun getStatistic(): LiveData<List<Statistic>> = liveData(Dispatchers.Main) {
         emit(App.db.getDao().getAll())
     }
+
+    fun deleteStatistic(position:Statistic): LiveData<Int> = liveData(Dispatchers.Main) {
+        emit(App.db.getDao().delete(position))
+    }
 }

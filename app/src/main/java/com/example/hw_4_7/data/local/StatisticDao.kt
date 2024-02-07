@@ -15,6 +15,9 @@ interface StatisticDao {
     fun insert(model:Statistic):Long
 
     @Delete
-    fun delete(model: Statistic)
+    fun delete(model: Statistic):Int
 
+    /*@Query("DELETE FROM statistic WHERE id = :positionId")
+    fun deleteById(positionId:Int):Int
+     */
 }

@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
                 status = binding.spinner.selectedItem.toString(),
                 difficulty = binding.difficultySpinner.selectedItem.toString(),
                 mistakes = binding.etMistakes.text.toString(),
+                result = binding.etPoint.text.toString()
             )
             if (binding.etMistakes.text!!.isEmpty() && binding.etPoint.text!!.isEmpty()){
                 Toast.makeText(this, "Вводите значения в поля", Toast.LENGTH_SHORT).show()
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
                     if (it != -1L){
                         Toast.makeText(this, "Данные успешно добавились", Toast.LENGTH_SHORT).show()
                     }else{
-                        Toast.makeText(this, "Данные не были добавилены", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Данные не были добавлены", Toast.LENGTH_SHORT).show()
                     }
                 }
             }
